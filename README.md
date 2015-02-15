@@ -1,12 +1,12 @@
 # Hello!
 
-Hello is a toy `s-expression` language written in ES6 Javascript.  
+Hello is a toy `s-expression` language and runtime written in ES6 Javascript.  
 Very much a learning experience and a work in progress.
 
 ## Usage
 
     gulp
-    iojs dist/hello.js example.hl
+    iojs compiled/src/main.js example.hl
     
 ## Example
     
@@ -15,7 +15,6 @@ Very much a learning experience and a work in progress.
     
     (do-hello "world")
  
-
 ## Features
 
 ### Higher order functions
