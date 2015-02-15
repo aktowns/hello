@@ -1,0 +1,19 @@
+(defun term.println (x) (ffi-call console.log x))
+
+(defun num.add (x y) (ffi-call1 Number.prototype.add x y))
+(defun num.min (x y) (ffi-call1 Number.prototype.min x y))
+(defun num.mul (x y) (ffi-call1 Number.prototype.mul x y))
+(defun num.div (x y) (ffi-call1 Number.prototype.div x y))
+(defun num.mod (x y) (ffi-call1 Number.prototype.mod x y))
+
+(defun str.concat (x y) (ffi-call1 String.prototype.concat x y))
+(defun str.repeat (x y) (ffi-call1 String.prototype.repeat x y))
+(defun str.substr (x y z) (ffi-call1 String.prototype.substr x y z))
+
+(defun ary.insert (xs index x) (ffi-call1 Array.prototype.insert xs index x))
+(defun ary.head (xs) (ffi-call1 Array.prototype.head xs))
+(defun ary.tail (xs) (ffi-call1 Array.prototype.tail xs))
+(defun ary.rest (xs) (ffi-call1 Array.prototype.rest xs))
+(defun ary.initial (xs) (ffi-call1 Array.prototype.initial xs))
+(defun ary.nth (xs index) (ffi-call1 Array.prototype.nth xs index))
+(defun ary.map (xs f) (ffi-call1 Array.prototype.map xs f))

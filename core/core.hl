@@ -1,0 +1,3 @@
+(define car ary.head)
+(define cdr ary.tail)
+(defun cons (x y) (ary.insert y 0 x))
