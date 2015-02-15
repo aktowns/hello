@@ -1,9 +1,8 @@
-import _ from 'lodash';
+import _        from 'lodash';
 
-import Types from './types'
-//import Lambda from './lambda';
-import Context from './context';
-import ListT from './nodes/list_t';
+import Types    from './types'
+import Context  from './context';
+import ListT    from './nodes/list_t';
 import {number_t, list_t, array_t, atom_t, string_t, lambda_t, Nil} from './types';
 
 export class Lambda {

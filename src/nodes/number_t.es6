@@ -1,4 +1,4 @@
-import NodeT from './node_t';
+import NodeT      from './node_t';
 import {number_t} from '../types';
 
 export default class NumberT extends NodeT {

@@ -1,6 +1,6 @@
-import _ from 'lodash';
+import _        from 'lodash';
 
-import NodeT from './node_t';
+import NodeT    from './node_t';
 import {list_t} from '../types';
 
 export default class ListT extends NodeT {

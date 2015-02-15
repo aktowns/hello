@@ -1,12 +1,12 @@
-import _ from 'lodash';
-import Parsimmon from 'parsimmon';
+import _          from 'lodash';
+import Parsimmon  from 'parsimmon';
 import {regex, string, optWhitespace, alt, lazy} from 'parsimmon';
 
-import AtomT from './nodes/atom_t';
-import NumberT from './nodes/number_t';
-import ListT from './nodes/list_t';
-import StringT from './nodes/string_t';
-import ArrayT from './nodes/array_t';
+import AtomT      from './nodes/atom_t';
+import NumberT    from './nodes/number_t';
+import ListT      from './nodes/list_t';
+import StringT    from './nodes/string_t';
+import ArrayT     from './nodes/array_t';
 
 export default class Parser {
   constructor(source) {

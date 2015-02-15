@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import _           from 'lodash';
 
 import {context_t} from './types';
 

@@ -1,10 +1,10 @@
-import fs from "fs";
-import _ from "lodash";
+import fs         from "fs";
+import _          from "lodash";
 
-import Parser from "./parser";
-import Native from "./native";
-import Context from "./context";
-import Evaluator from "./evaluator";
+import Parser     from "./parser";
+import Native     from "./native";
+import Context    from "./context";
+import Evaluator  from "./evaluator";
 
 // is there no way to call an infix function
 Number.prototype.add    = function (y) { return this + y; };

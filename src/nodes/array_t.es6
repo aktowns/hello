@@ -1,5 +1,5 @@
-import NodeT from './node_t';
-import {array_t} from '../types';
+import NodeT      from './node_t';
+import {array_t}  from '../types';
 
 export default class ArrayT extends NodeT {
   constructor(value) {
