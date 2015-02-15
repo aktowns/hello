@@ -72,19 +72,27 @@ export default class Evaluator {
     return target.run.apply(target, args);
   }
 
+  static evalType(expr, ctx) {
+
+  }
+
   static evalList(expr, ctx) {
     const args = expr.tail();
     var name, body, argList, xs;
 
     if (expr.head().value == 'define') {
       name = _.head(args);
-      body = args[1];
+      var types = args[1];
+      body = args[2];
 
       if (name.type != atom_t) {
-        throw new Error(`define expects name to be of type @Atom is ${Types.toString(name.type)}`);
+        throw new Error(`define expects name to be of type atom is ${Types.toString(name.type)}`);
       }
-      if (args.length > 2) {
-        throw new Error("define expects a length of 2");
+      if (types.type != list_t) {
+        throw new Error(`define expects type to be of type list is ${Types.toString(types.type)}`);
+      }
+      if (args.length > 3) {
+        throw new Error("define expects a length of 3");
       }
 
       ctx.scope[name.value] = Evaluator.evalExpr(body, ctx.clone());
@@ -95,13 +103,13 @@ export default class Evaluator {
       body = args[2];
 
       if (name.type != atom_t) {
-        throw new Error(`defun expects name to be of type @Atom is ${Types.toString(name.type)}`);
+        throw new Error(`defun expects name to be of type atom is ${Types.toString(name.type)}`);
       }
       if (argList.type != list_t) {
-        throw new Error(`defun expects an arglist of type @List is ${Types.toString(argList.type)}`);
+        throw new Error(`defun expects an arglist of type list is ${Types.toString(argList.type)}`);
       }
       if (body.type != list_t) {
-        throw new Error(`defun expects a body of type @List ${Types.toString(body.type)}`);
+        throw new Error(`defun expects a body of type list ${Types.toString(body.type)}`);
       }
       if (args.length > 3) {
         throw new Error("defun expects a length of 3");
@@ -117,10 +125,10 @@ export default class Evaluator {
       body = args[1];
 
       if (argList.type != list_t) {
-        throw new Error(`lambda expects an arglist of type @List is ${Types.toString(argList.type)}`);
+        throw new Error(`lambda expects an arglist of type list is ${Types.toString(argList.type)}`);
       }
       if (body.type != list_t) {
-        throw new Error(`lambda expects a body of type @List is ${Types.toString(body.type)}`);
+        throw new Error(`lambda expects a body of type list is ${Types.toString(body.type)}`);
       }
       if (args.length > 3) {
         throw new Error("lambda expects a length of 2");

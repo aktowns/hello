@@ -14,7 +14,7 @@ export default class Parser {
   }
 
   parse() {
-    const atom_rgx = regex(/[a-zA-Z_][\w\-\.]*/i);
+    const atom_rgx = regex(/([a-zA-Z_][\w\-\.]*)|(::)|(->)/i);
     const number_rgx = regex(/-?(0|[1-9]\d*)([.]\d+)?(e[+-]?\d+)?/i);
     const comment_rgx = regex(/.*?\n/i);
     const string_rgx = regex(/"((?:\\.|.)*?)"/, 1);

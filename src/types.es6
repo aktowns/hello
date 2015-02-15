@@ -1,4 +1,4 @@
-export let number_t  = Symbol('number');
+export var number_t  = Symbol('number');
 export var bool_t    = Symbol('bool');
 export var string_t  = Symbol('string');
 export var atom_t    = Symbol('atom');

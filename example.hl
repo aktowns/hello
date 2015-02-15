@@ -1,4 +1,4 @@
-(define woo (str.concat "woo "))
+(define woo (:: (-> string string)) (str.concat "woo "))
 (term.println (woo "waa"))
 (term.println (car [1 2 3]))
 (term.println (cdr [1 2 3]))

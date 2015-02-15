@@ -13,7 +13,7 @@ iojs compiled/src/main.js example.hl
 ## Example
 
 ```lisp
-(define hello (str.concat "hello "))
+(define hello (:: (-> string string)) (str.concat "hello "))
 (defun do-hello (x) (println (hello x)))
 
 (do-hello "world")
@@ -30,7 +30,7 @@ iojs compiled/src/main.js example.hl
 ### Partial function application
 
 ```lisp
-(define prefix-woo (str.concat "woo "))
+(define prefix-woo (:: (string -> string)) (str.concat "woo "))
 (prefix-woo "it works!") -- "woo it works"
 ```
     
